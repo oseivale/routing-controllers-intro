@@ -6,13 +6,13 @@ get '/welcome' => 'pages#welcome'
 # The above line of code states that if the user makes a GET request to the URL "/welcome",
 # Rails should run the welcome instance method inside the PagesController
 
-get '/' => 'pages#welcome'
+get root 'pages#welcome'
 
 get '/about' => 'pages#about'
 
 get '/contest' => 'pages#contest'
 
-get '/kitten/:size' => 'pages#kitten'
+get '/kitten/:size' => 'pages#kitten', as: 'kitten'
 
 get '/kittens/:size' => 'pages#kittens'
 
